@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>多网页管理器</title>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; img-src 'self' data:; style-src 'self';">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="title-bar">
+        <div class="tabs" id="tabs"></div>
+        <div class="window-controls">
+            <button id="night-mode-btn" class="night-mode-toggle" title="夜间模式">🌙</button>
+            <button id="minimize-btn" class="window-btn">−</button>
+            <button id="maximize-btn" class="window-btn">□</button>
+            <button id="close-btn" class="window-btn">×</button>
+        </div>
+    </div>
+
+    <div class="webview-container" id="webviewContainer"></div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+{
+  "profiles": [
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "urlPatterns": ["*://*.chataiapi.com/*", "*://chataiapi.com/*"]
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "urlPatterns": ["*://*.chataiapi.com/*", "*://chataiapi.com/*"]
+    },
+    {
+      "id": "ai",
+      "name": "小爱AI",
+      "urlPatterns": ["*://*.xiaoai.plus/*", "*://xiaoai.plus/*"]
+    },
+    {
+      "id": "xf",
+      "name": "讯飞",
+      "urlPatterns": ["*://*.xfyun.cn/*", "*://xfyun.cn/*"]
+    },
+    {
+      "id": "bigmodel",
+      "name": "质谱",
+      "urlPatterns": ["*://*.bigmodel.cn/*", "*://bigmodel.cn/*"]
+    }
+  ]
+}

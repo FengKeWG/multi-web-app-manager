@@ -1,0 +1,186 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    border: none;
+    overflow: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #e0e0e0;
+}
+
+/* 标题栏容器 */
+.title-bar {
+    display: flex;
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+/* 标签栏 */
+.tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    flex-grow: 1;
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.tab {
+    padding: 10px 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    border-right: 1px solid #333;
+    color: #bbb;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.tab:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.tab.active {
+    background-color: #363636;
+    border-bottom: 2px solid #0078d7;
+    color: #ffffff;
+}
+
+/* 窗口控制按钮 */
+.window-controls {
+    display: flex;
+    align-items: center;
+}
+
+.window-btn {
+    height: 100%;
+    width: 45px;
+    border: none;
+    background: transparent;
+    color: #bbb;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.window-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+#close-btn:hover {
+    background-color: #e81123;
+    color: #fff;
+}
+
+/* webview容器 */
+.webview-container {
+    flex: 1;
+    position: relative;
+}
+
+webview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+webview.active {
+    display: flex;
+}
+
+/* 滚动条美化 */
+.tabs::-webkit-scrollbar {
+    height: 6px;
+}
+
+.tabs::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+}
+
+.tabs::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* 夜间模式样式 */
+webview.night-mode {
+    filter: invert(85%) hue-rotate(180deg) brightness(120%) contrast(110%);
+}
+
+webview.night-mode img,
+webview.night-mode video,
+webview.night-mode canvas {
+    filter: invert(100%) hue-rotate(180deg) brightness(100%);
+}
+
+/* 夜间模式切换按钮 */
+.night-mode-toggle {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #bbb;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.night-mode-toggle:hover {
+    color: #fff;
+}
+
+.night-mode-toggle.active {
+    color: #0078d7;
+}
+
+/* 设置对话框样式 */
+.settings-dialog {
+    max-width: 350px;
+    font-size: 14px;
+    animation: fadeInDown 0.2s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.settings-dialog h3 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.settings-dialog h4 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.settings-dialog div div:hover {
+    background-color: #3a3a3a;
+    transition: background-color 0.2s;
+}

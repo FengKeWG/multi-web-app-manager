@@ -1,0 +1,25 @@
+{
+  "name": "api-manager",
+  "version": "1.0.0",
+  "description": "多网站API管理器",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "api",
+    "manager",
+    "electron"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "electron": "^35.1.0",
+    "electron-builder": "^24.9.1"
+  }
+}
